@@ -1,9 +1,9 @@
 ﻿$excel = new-object -ComObject Excel.Application
 #$excel.visible = $false
-$WorkBook = $excel.Workbooks.Open('C:\Users\faghkiu\Documents\Spreadsheets\Program Paths.csv')
+$WorkBook = $excel.Workbooks.Open('C:\excelpath\workbook.csv')
 $WorkSheet = $WorkBook.Sheets.Item(1)
 $WorkSheet.Name
-$Found = $WorkSheet.Cells.Find('Deploy-Application')
+$Found = $WorkSheet.Cells.Find('Install')
 $BeginAddress = $Found.Address(0,0,1,1)
 $BeginAddress
 [pscustomobject]@{
