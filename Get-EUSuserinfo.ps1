@@ -30,7 +30,7 @@ function Get-UserInfo{
     [ValidateNotNullOrEmpty()]
     [string[]]$LANIDS
     
-    connect-qadservice w1pvap1098 -proxy
+    connect-qadservice <domain> -proxy
     
     $Users = Get-Content $LANIDS
 
